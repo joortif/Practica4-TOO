@@ -21,7 +21,7 @@ namespace Practica4
 
         private void FormHijo_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show("Se ha cerrado " + this.Text, "Información");
+            MessageBox.Show("Se ha cerrado " + this.Text, "Aviso");
         }
 
         private void btCerrar_Click(object sender, EventArgs e)

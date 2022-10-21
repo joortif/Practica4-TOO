@@ -57,7 +57,7 @@ namespace Practica4
 
         private void smVentana_Click(object sender, EventArgs e)
         {
-
+            msMenu.MdiWindowListItem = smVentana;
         }
     }
 }
