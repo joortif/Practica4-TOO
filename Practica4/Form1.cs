@@ -14,11 +14,17 @@ namespace Practica4
     {
 
         private int numForms = 0;
+        private ToolStripDropDownItem[] desplegables;
         public FormPrincipal()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             IsMdiContainer = true;
+            desplegables = new ToolStripDropDownItem[4];
+            desplegables[0] = smArrangItems;
+            desplegables[1] = smCascada;
+            desplegables[2] = smHorizontal;
+            desplegables[3] = smVertical;
         }
 
         private void smSalir_Click(object sender, EventArgs e)
@@ -58,19 +64,13 @@ namespace Practica4
 
         private void smVentana_DropDownOpening(object sender, EventArgs e)
         {
-            if (MdiChildren.Length == 0)
+            if (ActiveMdiChild == null)
             {
-                smArrangItems.Visible = false;
-                smCascada.Visible = false;
-                smHorizontal.Visible = false;
-                smVertical.Visible = false;
+                smVentana.DropDownItems.Clear();
             }
             else
             {
-                smArrangItems.Visible = true;
-                smCascada.Visible = true;
-                smHorizontal.Visible = true;
-                smVertical.Visible = true;
+                smVentana.DropDownItems.AddRange(desplegables);
 
             }
         }

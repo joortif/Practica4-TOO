@@ -37,17 +37,19 @@
             this.rtbTexto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbTexto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbTexto.Location = new System.Drawing.Point(0, 0);
+            this.rtbTexto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbTexto.Name = "rtbTexto";
-            this.rtbTexto.Size = new System.Drawing.Size(800, 450);
+            this.rtbTexto.Size = new System.Drawing.Size(1067, 554);
             this.rtbTexto.TabIndex = 0;
             this.rtbTexto.Text = "";
             // 
             // btCerrar
             // 
             this.btCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btCerrar.Location = new System.Drawing.Point(340, 409);
+            this.btCerrar.Location = new System.Drawing.Point(453, 503);
+            this.btCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btCerrar.Name = "btCerrar";
-            this.btCerrar.Size = new System.Drawing.Size(71, 29);
+            this.btCerrar.Size = new System.Drawing.Size(95, 36);
             this.btCerrar.TabIndex = 1;
             this.btCerrar.Text = "Cerrar";
             this.btCerrar.UseVisualStyleBackColor = true;
@@ -55,11 +57,12 @@
             // 
             // FormHijo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btCerrar);
             this.Controls.Add(this.rtbTexto);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormHijo";
             this.Text = "FormHijo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormHijo_FormClosed);
