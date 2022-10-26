@@ -31,6 +31,7 @@ namespace Practica4
             numForms++;
             Form FormHijo = new FormHijo();
             FormHijo.Text = "Documento " + numForms;
+            msMenu.MdiWindowListItem = smVentana;
             FormHijo.Show();
             FormHijo.MdiParent = this;
         }
@@ -55,9 +56,23 @@ namespace Practica4
             LayoutMdi(MdiLayout.TileVertical);
         }
 
-        private void smVentana_Click(object sender, EventArgs e)
+        private void smVentana_DropDownOpening(object sender, EventArgs e)
         {
-            msMenu.MdiWindowListItem = smVentana;
+            if (MdiChildren.Length == 0)
+            {
+                smArrangItems.Visible = false;
+                smCascada.Visible = false;
+                smHorizontal.Visible = false;
+                smVertical.Visible = false;
+            }
+            else
+            {
+                smArrangItems.Visible = true;
+                smCascada.Visible = true;
+                smHorizontal.Visible = true;
+                smVertical.Visible = true;
+
+            }
         }
     }
 }

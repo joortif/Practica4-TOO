@@ -42,12 +42,13 @@
             // 
             // msMenu
             // 
+            this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.smArchivo,
             this.smVentana});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(800, 24);
+            this.msMenu.Size = new System.Drawing.Size(1067, 28);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -57,20 +58,20 @@
             this.smNuevo,
             this.smSalir});
             this.smArchivo.Name = "smArchivo";
-            this.smArchivo.Size = new System.Drawing.Size(60, 20);
+            this.smArchivo.Size = new System.Drawing.Size(73, 24);
             this.smArchivo.Text = "Archivo";
             // 
             // smNuevo
             // 
             this.smNuevo.Name = "smNuevo";
-            this.smNuevo.Size = new System.Drawing.Size(180, 22);
+            this.smNuevo.Size = new System.Drawing.Size(135, 26);
             this.smNuevo.Text = "Nuevo";
             this.smNuevo.Click += new System.EventHandler(this.smNuevo_Click);
             // 
             // smSalir
             // 
             this.smSalir.Name = "smSalir";
-            this.smSalir.Size = new System.Drawing.Size(180, 22);
+            this.smSalir.Size = new System.Drawing.Size(135, 26);
             this.smSalir.Text = "Salir";
             this.smSalir.Click += new System.EventHandler(this.smSalir_Click);
             // 
@@ -82,45 +83,46 @@
             this.smHorizontal,
             this.smVertical});
             this.smVentana.Name = "smVentana";
-            this.smVentana.Size = new System.Drawing.Size(61, 20);
+            this.smVentana.Size = new System.Drawing.Size(76, 24);
             this.smVentana.Text = "Ventana";
-            this.smVentana.Click += new System.EventHandler(this.smVentana_Click);
+            this.smVentana.DropDownOpening += new System.EventHandler(this.smVentana_DropDownOpening);
             // 
             // smArrangItems
             // 
             this.smArrangItems.Name = "smArrangItems";
-            this.smArrangItems.Size = new System.Drawing.Size(180, 22);
+            this.smArrangItems.Size = new System.Drawing.Size(224, 26);
             this.smArrangItems.Text = "ArrangeIcons";
             this.smArrangItems.Click += new System.EventHandler(this.smArrangItems_Click);
             // 
             // smCascada
             // 
             this.smCascada.Name = "smCascada";
-            this.smCascada.Size = new System.Drawing.Size(180, 22);
+            this.smCascada.Size = new System.Drawing.Size(224, 26);
             this.smCascada.Text = "Cascada";
             this.smCascada.Click += new System.EventHandler(this.smCascada_Click);
             // 
             // smHorizontal
             // 
             this.smHorizontal.Name = "smHorizontal";
-            this.smHorizontal.Size = new System.Drawing.Size(180, 22);
+            this.smHorizontal.Size = new System.Drawing.Size(224, 26);
             this.smHorizontal.Text = "Horizontal";
             this.smHorizontal.Click += new System.EventHandler(this.smHorizontal_Click);
             // 
             // smVertical
             // 
             this.smVertical.Name = "smVertical";
-            this.smVertical.Size = new System.Drawing.Size(180, 22);
+            this.smVertical.Size = new System.Drawing.Size(224, 26);
             this.smVertical.Text = "Vertical";
             this.smVertical.Click += new System.EventHandler(this.smVertical_Click);
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.msMenu);
             this.MainMenuStrip = this.msMenu;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPrincipal";
             this.Text = "Editor de texto";
             this.msMenu.ResumeLayout(false);

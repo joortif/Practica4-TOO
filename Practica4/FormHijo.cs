@@ -15,8 +15,7 @@ namespace Practica4
         public FormHijo()
         {
             InitializeComponent();
-           
-;
+     
         }
 
         private void FormHijo_FormClosed(object sender, FormClosedEventArgs e)
