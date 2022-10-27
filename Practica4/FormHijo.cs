@@ -13,10 +13,10 @@ namespace Practica4
 {
     public partial class FormHijo : Form
     {
-        public FormHijo()
+        public FormHijo(String nombre)
         {
             InitializeComponent();
-     
+            
         }
 
         private void FormHijo_FormClosed(object sender, FormClosedEventArgs e)

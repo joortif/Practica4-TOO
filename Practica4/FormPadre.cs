@@ -14,17 +14,13 @@ namespace Practica4
     {
 
         private int numForms = 0;
-        private ToolStripDropDownItem[] desplegables;
         public FormPrincipal()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             IsMdiContainer = true;
-            desplegables = new ToolStripDropDownItem[4];
-            desplegables[0] = smArrangItems;
-            desplegables[1] = smCascada;
-            desplegables[2] = smHorizontal;
-            desplegables[3] = smVertical;
+            smVentana.Visible = false;
+            
         }
 
         private void smSalir_Click(object sender, EventArgs e)
@@ -35,9 +31,8 @@ namespace Practica4
         private void smNuevo_Click(object sender, EventArgs e)
         {
             numForms++;
-            Form FormHijo = new FormHijo();
+            Form FormHijo = new FormHijo(null);
             FormHijo.Text = "Documento " + numForms;
-            msMenu.MdiWindowListItem = smVentana;
             FormHijo.Show();
             FormHijo.MdiParent = this;
         }
@@ -64,15 +59,32 @@ namespace Practica4
 
         private void smVentana_DropDownOpening(object sender, EventArgs e)
         {
+           
+        }
+
+        private void cambiarTextoStripMenu(object sender, EventArgs e)
+        {
+            tslSeleccionado.Text = sender.ToString();
+        }
+
+        private void FormPrincipal_MdiChildActivate(object sender, EventArgs e)
+        {
             if (ActiveMdiChild == null)
             {
-                smVentana.DropDownItems.Clear();
+                smVentana.Visible = false;
+                tslDocumento.Text = null;
             }
             else
             {
-                smVentana.DropDownItems.AddRange(desplegables);
+                smVentana.Visible = true;
+                tslDocumento.Text = ActiveMdiChild.Text;
 
             }
+        }
+
+        private void tsmiBarraEstado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
