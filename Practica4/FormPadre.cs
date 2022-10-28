@@ -20,7 +20,21 @@ namespace Practica4
             WindowState = FormWindowState.Maximized;
             IsMdiContainer = true;
             smVentana.Visible = false;
-            
+
+            foreach (ToolStripMenuItem opcion in msMenu.Items)
+            {
+                opcion.MouseEnter += Opcion_MouseEnter;
+                foreach (ToolStripDropDownItem opcion2 in opcion.DropDownItems)
+                {
+                    opcion2.MouseEnter += Opcion_MouseEnter;
+                }
+            }
+
+        }
+
+        private void Opcion_MouseEnter(object sender, EventArgs e)
+        {
+            tslSeleccionado.Text = sender.ToString();
         }
 
         private void smSalir_Click(object sender, EventArgs e)
@@ -35,6 +49,20 @@ namespace Practica4
             FormHijo.Text = "Documento " + numForms;
             FormHijo.Show();
             FormHijo.MdiParent = this;
+
+            foreach (ToolStripMenuItem opcion in msMenu.Items)
+            {
+                opcion.MouseEnter += Opcion_MouseEnter;
+                foreach (ToolStripItem opcion2 in opcion.DropDownItems)
+                {
+                    if (opcion2 is ToolStripDropDownItem)
+                    {
+                        opcion2.MouseEnter += Opcion_MouseEnter;
+                    }
+                    
+                }
+            }
+
         }
 
         private void smArrangItems_Click(object sender, EventArgs e)
@@ -57,16 +85,6 @@ namespace Practica4
             LayoutMdi(MdiLayout.TileVertical);
         }
 
-        private void smVentana_DropDownOpening(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cambiarTextoStripMenu(object sender, EventArgs e)
-        {
-            tslSeleccionado.Text = sender.ToString();
-        }
-
         private void FormPrincipal_MdiChildActivate(object sender, EventArgs e)
         {
             if (ActiveMdiChild == null)
@@ -80,11 +98,19 @@ namespace Practica4
                 tslDocumento.Text = ActiveMdiChild.Text;
 
             }
+
+
         }
 
         private void tsmiBarraEstado_Click(object sender, EventArgs e)
         {
-
+            if (tsmiBarraEstado.Checked)
+            {
+                ssBarraEstado.Visible = true;
+            } else
+            {
+                ssBarraEstado.Visible = false;
+            }
         }
     }
 }
