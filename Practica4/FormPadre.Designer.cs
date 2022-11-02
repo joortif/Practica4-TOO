@@ -59,7 +59,7 @@
             this.msMenu.MdiWindowListItem = this.smVentana;
             this.msMenu.Name = "msMenu";
             this.msMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(1067, 28);
+            this.msMenu.Size = new System.Drawing.Size(1067, 30);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -71,7 +71,7 @@
             this.cerrarTodoToolStripMenuItem,
             this.smSalir});
             this.smArchivo.Name = "smArchivo";
-            this.smArchivo.Size = new System.Drawing.Size(73, 24);
+            this.smArchivo.Size = new System.Drawing.Size(73, 26);
             this.smArchivo.Text = "Archivo";
             // 
             // smNuevo
@@ -108,7 +108,7 @@
             this.smHorizontal,
             this.smVertical});
             this.smVentana.Name = "smVentana";
-            this.smVentana.Size = new System.Drawing.Size(76, 24);
+            this.smVentana.Size = new System.Drawing.Size(76, 26);
             this.smVentana.Text = "Ventana";
             // 
             // smArrangItems
@@ -144,7 +144,7 @@
             this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiBarraEstado});
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 26);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // tsmiBarraEstado
@@ -185,6 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.ssBarraEstado);
             this.Controls.Add(this.msMenu);
