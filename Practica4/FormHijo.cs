@@ -13,10 +13,28 @@ namespace Practica4
 {
     public partial class FormHijo : Form
     {
+        private String ruta;
+
+        public RichTextBox RtbTexto
+        {
+            get
+            {
+                return this.rtbTexto;
+            }
+        }
+
+        public String Ruta
+        {
+            get
+            {
+                return this.ruta;
+            }
+        }
+
         public FormHijo(String nombre)
         {
             InitializeComponent();
-
+            this.ruta = nombre;
        
         }
 
@@ -29,6 +47,30 @@ namespace Practica4
         private void btCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void tsmiGuardar_Click(object sender, EventArgs e)
+        {
+            //if ()
+            //{
+            //    tsmiGuardarComo.PerformClick();
+            //} else
+            //{
+
+            //}
+            
+        }
+
+        private void tsmiGuardarComo_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog cuadroGuardar = new SaveFileDialog();
+            cuadroGuardar.Title = "Seleccione el archivo a guardar";
+            cuadroGuardar.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
+            cuadroGuardar.DefaultExt = "*.rtf";
+
+            
+
+
         }
     }
 }

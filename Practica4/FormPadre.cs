@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,10 +25,10 @@ namespace Practica4
 
             foreach (ToolStripMenuItem opcion in msMenu.Items)
             {
-                opcion.MouseEnter += Opcion_MouseEnter;
+                opcion.MouseHover += Opcion_MouseEnter;
                 foreach (ToolStripDropDownItem opcion2 in opcion.DropDownItems)
                 {
-                    opcion2.MouseEnter += Opcion_MouseEnter;
+                    opcion2.MouseHover += Opcion_MouseEnter;
                 }
             }
 
@@ -45,19 +47,19 @@ namespace Practica4
         private void smNuevo_Click(object sender, EventArgs e)
         {
             numForms++;
-            Form FormHijo = new FormHijo(null);
-            FormHijo.Text = "Documento " + numForms;
-            FormHijo.Show();
-            FormHijo.MdiParent = this;
+            Form fHijo = new FormHijo("");
+            fHijo.Text = "Documento " + numForms;
+            fHijo.Show();
+            fHijo.MdiParent = this;
 
             foreach (ToolStripMenuItem opcion in msMenu.Items)
             {
-                opcion.MouseEnter += Opcion_MouseEnter;
+                opcion.MouseHover += Opcion_MouseEnter;
                 foreach (ToolStripItem opcion2 in opcion.DropDownItems)
                 {
                     if (opcion2 is ToolStripDropDownItem)
                     {
-                        opcion2.MouseEnter += Opcion_MouseEnter;
+                        opcion2.MouseHover += Opcion_MouseEnter;
                     }
                     
                 }
@@ -111,6 +113,37 @@ namespace Practica4
             {
                 ssBarraEstado.Visible = false;
             }
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.Title = "Seleccione el archivo a abrir";
+            ofd.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
+            ofd.FileName = ofd.InitialDirectory;
+            
+            DialogResult pulsado = ofd.ShowDialog();
+            if (pulsado == DialogResult.OK)
+            {
+                FormHijo fHijo = new FormHijo(ofd.FileName);
+                String[] trozos = fHijo.Ruta.Split(Path.DirectorySeparatorChar);
+                String[] trozosNombre = trozos[trozos.Length - 1].Split('.');
+                if (trozosNombre[trozosNombre.Length-1] == "txt")
+                {
+                    fHijo.RtbTexto.LoadFile(ofd.FileName, RichTextBoxStreamType.PlainText);
+                } else if (trozosNombre[trozos.Length-1] == "rtf")
+                {
+                    fHijo.RtbTexto.LoadFile(ofd.FileName, RichTextBoxStreamType.RichText);
+                }
+                fHijo.Text = trozos[trozos.Length - 1];
+                fHijo.Show();
+                
+            } 
+
+
+
+
         }
     }
 }

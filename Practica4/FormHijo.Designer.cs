@@ -49,20 +49,18 @@
             // 
             this.rtbTexto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbTexto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbTexto.Location = new System.Drawing.Point(0, 0);
-            this.rtbTexto.Margin = new System.Windows.Forms.Padding(4);
+            this.rtbTexto.Location = new System.Drawing.Point(0, 24);
             this.rtbTexto.Name = "rtbTexto";
-            this.rtbTexto.Size = new System.Drawing.Size(1067, 554);
+            this.rtbTexto.Size = new System.Drawing.Size(800, 426);
             this.rtbTexto.TabIndex = 0;
             this.rtbTexto.Text = "";
             // 
             // btCerrar
             // 
             this.btCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btCerrar.Location = new System.Drawing.Point(453, 503);
-            this.btCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btCerrar.Location = new System.Drawing.Point(340, 409);
             this.btCerrar.Name = "btCerrar";
-            this.btCerrar.Size = new System.Drawing.Size(95, 36);
+            this.btCerrar.Size = new System.Drawing.Size(71, 29);
             this.btCerrar.TabIndex = 1;
             this.btCerrar.Text = "Cerrar";
             this.btCerrar.UseVisualStyleBackColor = true;
@@ -76,7 +74,8 @@
             this.tsmiEdicion});
             this.msMenuHijo.Location = new System.Drawing.Point(0, 0);
             this.msMenuHijo.Name = "msMenuHijo";
-            this.msMenuHijo.Size = new System.Drawing.Size(1067, 28);
+            this.msMenuHijo.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.msMenuHijo.Size = new System.Drawing.Size(800, 24);
             this.msMenuHijo.TabIndex = 2;
             this.msMenuHijo.Text = "menuStrip1";
             this.msMenuHijo.Visible = false;
@@ -90,7 +89,7 @@
             this.tsmiCerrar});
             this.tsmiArchivo.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.tsmiArchivo.Name = "tsmiArchivo";
-            this.tsmiArchivo.Size = new System.Drawing.Size(73, 24);
+            this.tsmiArchivo.Size = new System.Drawing.Size(60, 20);
             this.tsmiArchivo.Text = "Archivo";
             // 
             // tsmiGuardar
@@ -98,30 +97,32 @@
             this.tsmiGuardar.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiGuardar.MergeIndex = 2;
             this.tsmiGuardar.Name = "tsmiGuardar";
-            this.tsmiGuardar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiGuardar.Size = new System.Drawing.Size(180, 22);
             this.tsmiGuardar.Text = "Guardar";
+            this.tsmiGuardar.Click += new System.EventHandler(this.tsmiGuardar_Click);
             // 
             // tsmiGuardarComo
             // 
             this.tsmiGuardarComo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiGuardarComo.MergeIndex = 3;
             this.tsmiGuardarComo.Name = "tsmiGuardarComo";
-            this.tsmiGuardarComo.Size = new System.Drawing.Size(224, 26);
+            this.tsmiGuardarComo.Size = new System.Drawing.Size(180, 22);
             this.tsmiGuardarComo.Text = "Guardar como";
+            this.tsmiGuardarComo.Click += new System.EventHandler(this.tsmiGuardarComo_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.toolStripSeparator1.MergeIndex = 4;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
             // 
             // tsmiCerrar
             // 
             this.tsmiCerrar.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiCerrar.MergeIndex = 5;
             this.tsmiCerrar.Name = "tsmiCerrar";
-            this.tsmiCerrar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiCerrar.Size = new System.Drawing.Size(150, 22);
             this.tsmiCerrar.Text = "Cerrar";
             // 
             // tsmiEdicion
@@ -133,50 +134,49 @@
             this.tsmiCopiar,
             this.tsmiPegar});
             this.tsmiEdicion.MergeAction = System.Windows.Forms.MergeAction.Insert;
-            this.tsmiEdicion.MergeIndex = 2;
+            this.tsmiEdicion.MergeIndex = 1;
             this.tsmiEdicion.Name = "tsmiEdicion";
-            this.tsmiEdicion.Size = new System.Drawing.Size(72, 24);
+            this.tsmiEdicion.Size = new System.Drawing.Size(58, 20);
             this.tsmiEdicion.Text = "Edición";
             // 
             // tsmiDeshacer
             // 
             this.tsmiDeshacer.Name = "tsmiDeshacer";
-            this.tsmiDeshacer.Size = new System.Drawing.Size(224, 26);
+            this.tsmiDeshacer.Size = new System.Drawing.Size(122, 22);
             this.tsmiDeshacer.Text = "Deshacer";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(119, 6);
             // 
             // tsmiCortar
             // 
             this.tsmiCortar.Name = "tsmiCortar";
-            this.tsmiCortar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiCortar.Size = new System.Drawing.Size(122, 22);
             this.tsmiCortar.Text = "Cortar";
             // 
             // tsmiCopiar
             // 
             this.tsmiCopiar.Name = "tsmiCopiar";
-            this.tsmiCopiar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiCopiar.Size = new System.Drawing.Size(122, 22);
             this.tsmiCopiar.Text = "Copiar";
             // 
             // tsmiPegar
             // 
             this.tsmiPegar.Name = "tsmiPegar";
-            this.tsmiPegar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiPegar.Size = new System.Drawing.Size(122, 22);
             this.tsmiPegar.Text = "Pegar";
             // 
             // FormHijo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btCerrar);
             this.Controls.Add(this.rtbTexto);
             this.Controls.Add(this.msMenuHijo);
             this.MainMenuStrip = this.msMenuHijo;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormHijo";
             this.Text = "FormHijo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormHijo_FormClosed);
