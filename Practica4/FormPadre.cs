@@ -87,6 +87,17 @@ namespace Practica4
             LayoutMdi(MdiLayout.TileVertical);
         }
 
+        private void mostrarOpcionInferior()
+        {
+            foreach (ToolStripMenuItem opcion in msMenu.Items)
+            {
+                opcion.MouseHover += Opcion_MouseEnter;
+                foreach (ToolStripDropDownItem opcion2 in opcion.DropDownItems)
+                {
+                    opcion2.MouseHover += Opcion_MouseEnter;
+                }
+            }
+        }
         private void FormPrincipal_MdiChildActivate(object sender, EventArgs e)
         {
             if (ActiveMdiChild == null)
@@ -127,6 +138,7 @@ namespace Practica4
             if (pulsado == DialogResult.OK)
             {
                 FormHijo fHijo = new FormHijo(ofd.FileName);
+                fHijo.MdiParent = this;
                 String[] trozos = fHijo.Ruta.Split(Path.DirectorySeparatorChar);
                 String[] trozosNombre = trozos[trozos.Length - 1].Split('.');
                 if (trozosNombre[trozosNombre.Length-1] == "txt")
@@ -139,7 +151,8 @@ namespace Practica4
                 fHijo.Text = trozos[trozos.Length - 1];
                 fHijo.Show();
                 
-            } 
+            }
+            ofd.Dispose();
 
 
 
