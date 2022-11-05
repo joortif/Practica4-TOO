@@ -33,10 +33,12 @@ namespace Practica4
             }
         }
 
+
         public FormHijo(String nombre)
         {
             InitializeComponent();
             this.ruta = nombre;
+
        
         }
 
@@ -100,46 +102,25 @@ namespace Practica4
             cuadroGuardar.FileName = this.Text;
 
 
-            cuadroGuardar.DefaultExt = ".txt"; //Por defecto la extensión será .txt
-            cuadroGuardar.AddExtension = true;
-
-            String[] trozosNombre = cuadroGuardar.FileName.Split('.');
-            String nombre;
-
+            cuadroGuardar.DefaultExt = "txt"; //Por defecto la extensión será .txt
+           
             DialogResult pulsado = cuadroGuardar.ShowDialog();
             if (pulsado == DialogResult.OK)
             {
-                if (trozosNombre.Length == 0)
+                String nombreYExt = cuadroGuardar.FileName.Split(Path.DirectorySeparatorChar).Last();
+                String ext = nombreYExt.Split('.').Last();
+                if (ext == "rtf")
                 {
-                    nombre = cuadroGuardar.FileName;
+                    this.rtbTexto.SaveFile(cuadroGuardar.FileName, RichTextBoxStreamType.RichText);
                 } else
                 {
-                    nombre = trozosNombre[0];
+                    this.rtbTexto.SaveFile(cuadroGuardar.FileName, RichTextBoxStreamType.PlainText);
                 }
-                if (trozosNombre[trozosNombre.Length - 1] == ".rtf")
-                {
-                    this.rtbTexto.SaveFile(nombre, RichTextBoxStreamType.RichText);
-                } else
-                {
-                    this.rtbTexto.SaveFile(nombre, RichTextBoxStreamType.PlainText);
-                }
-            }
-            cuadroGuardar.Dispose();
-           
-            
-
-
-        }
-
-        private void rtbTexto_TextChanged(object sender, EventArgs e)
-        {
-            if (this.rtbTexto != null)
-            {
-                this.rtbTexto.Modified = true;
-            } else
-            {
+                this.Text = nombreYExt;
                 this.rtbTexto.Modified = false;
             }
+            cuadroGuardar.Dispose();
+
         }
 
         private void tsmiDeshacer_Click(object sender, EventArgs e)
@@ -173,6 +154,11 @@ namespace Practica4
                 this.rtbTexto.Font = cuadroFuentes.Font;
                 this.rtbTexto.ForeColor = cuadroFuentes.Color;
             }
+        }
+
+        private void rtbTexto_TextChanged(object sender, EventArgs e)
+        {
+            this.rtbTexto.Modified = true;
         }
     }
 }

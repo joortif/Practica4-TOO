@@ -139,18 +139,18 @@ namespace Practica4
             {
                 FormHijo fHijo = new FormHijo(ofd.FileName);
                 fHijo.MdiParent = this;
-                String[] trozos = fHijo.Ruta.Split(Path.DirectorySeparatorChar);
-                String[] trozosNombre = trozos[trozos.Length - 1].Split('.');
-                if (trozosNombre[trozosNombre.Length-1] == "txt")
+                String nombreCompleto = fHijo.Ruta.Split(Path.DirectorySeparatorChar).Last();
+                String ext = nombreCompleto.Split('.').Last();
+                if (ext == "txt")
                 {
                     fHijo.RtbTexto.LoadFile(ofd.FileName, RichTextBoxStreamType.PlainText);
-                } else if (trozosNombre[trozos.Length-1] == "rtf")
+                } else if (ext == "rtf")
                 {
                     fHijo.RtbTexto.LoadFile(ofd.FileName, RichTextBoxStreamType.RichText);
                 }
-                fHijo.Text = trozos[trozos.Length - 1];
+                fHijo.Text = nombreCompleto;
                 fHijo.Show();
-                
+                fHijo.RtbTexto.Modified = false;
             }
             ofd.Dispose();
 

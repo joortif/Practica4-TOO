@@ -50,10 +50,10 @@
             // 
             this.rtbTexto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbTexto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbTexto.Location = new System.Drawing.Point(0, 28);
-            this.rtbTexto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbTexto.Location = new System.Drawing.Point(0, 0);
+            this.rtbTexto.Margin = new System.Windows.Forms.Padding(4);
             this.rtbTexto.Name = "rtbTexto";
-            this.rtbTexto.Size = new System.Drawing.Size(1067, 526);
+            this.rtbTexto.Size = new System.Drawing.Size(1067, 554);
             this.rtbTexto.TabIndex = 0;
             this.rtbTexto.Text = "";
             this.rtbTexto.TextChanged += new System.EventHandler(this.rtbTexto_TextChanged);
@@ -62,7 +62,7 @@
             // 
             this.btCerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btCerrar.Location = new System.Drawing.Point(453, 503);
-            this.btCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btCerrar.Name = "btCerrar";
             this.btCerrar.Size = new System.Drawing.Size(95, 36);
             this.btCerrar.TabIndex = 1;
@@ -102,7 +102,7 @@
             this.tsmiGuardar.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiGuardar.MergeIndex = 2;
             this.tsmiGuardar.Name = "tsmiGuardar";
-            this.tsmiGuardar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiGuardar.Size = new System.Drawing.Size(187, 26);
             this.tsmiGuardar.Text = "Guardar";
             this.tsmiGuardar.Click += new System.EventHandler(this.tsmiGuardar_Click);
             // 
@@ -111,7 +111,7 @@
             this.tsmiGuardarComo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiGuardarComo.MergeIndex = 3;
             this.tsmiGuardarComo.Name = "tsmiGuardarComo";
-            this.tsmiGuardarComo.Size = new System.Drawing.Size(224, 26);
+            this.tsmiGuardarComo.Size = new System.Drawing.Size(187, 26);
             this.tsmiGuardarComo.Text = "Guardar como";
             this.tsmiGuardarComo.Click += new System.EventHandler(this.tsmiGuardarComo_Click);
             // 
@@ -120,14 +120,14 @@
             this.toolStripSeparator1.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.toolStripSeparator1.MergeIndex = 4;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
             // 
             // tsmiCerrar
             // 
             this.tsmiCerrar.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiCerrar.MergeIndex = 5;
             this.tsmiCerrar.Name = "tsmiCerrar";
-            this.tsmiCerrar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiCerrar.Size = new System.Drawing.Size(187, 26);
             this.tsmiCerrar.Text = "Cerrar";
             // 
             // tsmiEdicion
@@ -147,7 +147,7 @@
             // tsmiDeshacer
             // 
             this.tsmiDeshacer.Name = "tsmiDeshacer";
-            this.tsmiDeshacer.Size = new System.Drawing.Size(224, 26);
+            this.tsmiDeshacer.Size = new System.Drawing.Size(153, 26);
             this.tsmiDeshacer.Text = "Deshacer";
             this.tsmiDeshacer.Click += new System.EventHandler(this.tsmiDeshacer_Click);
             // 
@@ -159,21 +159,21 @@
             // tsmiCortar
             // 
             this.tsmiCortar.Name = "tsmiCortar";
-            this.tsmiCortar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiCortar.Size = new System.Drawing.Size(153, 26);
             this.tsmiCortar.Text = "Cortar";
             this.tsmiCortar.Click += new System.EventHandler(this.tsmiCortar_Click);
             // 
             // tsmiCopiar
             // 
             this.tsmiCopiar.Name = "tsmiCopiar";
-            this.tsmiCopiar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiCopiar.Size = new System.Drawing.Size(153, 26);
             this.tsmiCopiar.Text = "&Copiar";
             this.tsmiCopiar.Click += new System.EventHandler(this.tsmiCopiar_Click);
             // 
             // tsmiPegar
             // 
             this.tsmiPegar.Name = "tsmiPegar";
-            this.tsmiPegar.Size = new System.Drawing.Size(224, 26);
+            this.tsmiPegar.Size = new System.Drawing.Size(153, 26);
             this.tsmiPegar.Text = "Pegar";
             this.tsmiPegar.Click += new System.EventHandler(this.tsmiPegar_Click);
             // 
@@ -193,7 +193,7 @@
             this.Controls.Add(this.rtbTexto);
             this.Controls.Add(this.msMenuHijo);
             this.MainMenuStrip = this.msMenuHijo;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormHijo";
             this.Text = "FormHijo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHijo_FormClosing);
