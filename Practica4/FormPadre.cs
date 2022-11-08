@@ -23,21 +23,9 @@ namespace Practica4
             IsMdiContainer = true;
             smVentana.Visible = false;
 
-            foreach (ToolStripMenuItem opcion in msMenu.Items)
-            {
-                opcion.MouseHover += Opcion_MouseEnter;
-                foreach (ToolStripDropDownItem opcion2 in opcion.DropDownItems)
-                {
-                    opcion2.MouseHover += Opcion_MouseEnter;
-                }
-            }
-
         }
 
-        private void Opcion_MouseEnter(object sender, EventArgs e)
-        {
-            tslSeleccionado.Text = sender.ToString();
-        }
+        
 
         private void smSalir_Click(object sender, EventArgs e)
         {
@@ -52,18 +40,6 @@ namespace Practica4
             fHijo.Show();
             fHijo.MdiParent = this;
 
-            foreach (ToolStripMenuItem opcion in msMenu.Items)
-            {
-                opcion.MouseHover += Opcion_MouseEnter;
-                foreach (ToolStripItem opcion2 in opcion.DropDownItems)
-                {
-                    if (opcion2 is ToolStripDropDownItem)
-                    {
-                        opcion2.MouseHover += Opcion_MouseEnter;
-                    }
-                    
-                }
-            }
 
         }
 
@@ -87,17 +63,6 @@ namespace Practica4
             LayoutMdi(MdiLayout.TileVertical);
         }
 
-        private void mostrarOpcionInferior()
-        {
-            foreach (ToolStripMenuItem opcion in msMenu.Items)
-            {
-                opcion.MouseHover += Opcion_MouseEnter;
-                foreach (ToolStripDropDownItem opcion2 in opcion.DropDownItems)
-                {
-                    opcion2.MouseHover += Opcion_MouseEnter;
-                }
-            }
-        }
         private void FormPrincipal_MdiChildActivate(object sender, EventArgs e)
         {
             if (ActiveMdiChild == null)
@@ -114,7 +79,6 @@ namespace Practica4
 
 
         }
-
         private void tsmiBarraEstado_Click(object sender, EventArgs e)
         {
             if (tsmiBarraEstado.Checked)
@@ -133,7 +97,7 @@ namespace Practica4
             ofd.Title = "Seleccione el archivo a abrir";
             ofd.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
             ofd.FileName = ofd.InitialDirectory;
-            
+
             DialogResult pulsado = ofd.ShowDialog();
             if (pulsado == DialogResult.OK)
             {
@@ -144,7 +108,8 @@ namespace Practica4
                 if (ext == "txt")
                 {
                     fHijo.RtbTexto.LoadFile(ofd.FileName, RichTextBoxStreamType.PlainText);
-                } else if (ext == "rtf")
+                }
+                else if (ext == "rtf")
                 {
                     fHijo.RtbTexto.LoadFile(ofd.FileName, RichTextBoxStreamType.RichText);
                 }
@@ -154,9 +119,51 @@ namespace Practica4
             }
             ofd.Dispose();
 
+        }
+        private void ToolStripItem_MouseLeave(object sender, EventArgs e)
+        {
+            this.tslSeleccionado.Text = "";
+        }
 
+        private void ToolStripItem_MouseHover(object sender, EventArgs e)
+        {
+            ToolStripItem t = sender as ToolStripItem;
+            if (t != null)
+            {
+                this.tslSeleccionado.Text = t.Text;
+            }
+        }
 
+        private void CargarEventos()
+        {
+            foreach (ToolStripMenuItem opcion in this.msMenu.Items)
+            {
+                opcion.MouseHover -= ToolStripItem_MouseHover;
+                opcion.MouseLeave -= ToolStripItem_MouseLeave;
+                opcion.MouseHover += ToolStripItem_MouseHover;
+                opcion.MouseLeave += ToolStripItem_MouseLeave;
+                foreach (ToolStripItem opcion2 in opcion.DropDownItems)
+                {
+                    if (opcion2 is ToolStripMenuItem)
+                    {
+                        opcion2.MouseHover -= ToolStripItem_MouseHover;
+                        opcion2.MouseLeave -= ToolStripItem_MouseLeave;
+                        opcion2.MouseHover += ToolStripItem_MouseHover;
+                        opcion2.MouseLeave += ToolStripItem_MouseLeave;
+                    }
+                    
+                }
+            }
+        }
 
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            this.CargarEventos();
+        }
+
+        private void FormPrincipal_Layout(object sender, LayoutEventArgs e)
+        {
+            this.CargarEventos();
         }
     }
 }

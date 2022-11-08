@@ -58,8 +58,8 @@
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.MdiWindowListItem = this.smVentana;
             this.msMenu.Name = "msMenu";
-            this.msMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(800, 24);
+            this.msMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.msMenu.Size = new System.Drawing.Size(1067, 28);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -71,33 +71,33 @@
             this.cerrarTodoToolStripMenuItem,
             this.smSalir});
             this.smArchivo.Name = "smArchivo";
-            this.smArchivo.Size = new System.Drawing.Size(60, 20);
+            this.smArchivo.Size = new System.Drawing.Size(73, 24);
             this.smArchivo.Text = "Archivo";
             // 
             // smNuevo
             // 
             this.smNuevo.Name = "smNuevo";
-            this.smNuevo.Size = new System.Drawing.Size(180, 22);
+            this.smNuevo.Size = new System.Drawing.Size(168, 26);
             this.smNuevo.Text = "Nuevo";
             this.smNuevo.Click += new System.EventHandler(this.smNuevo_Click);
             // 
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.abrirToolStripMenuItem.Text = "Abrir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // cerrarTodoToolStripMenuItem
             // 
             this.cerrarTodoToolStripMenuItem.Name = "cerrarTodoToolStripMenuItem";
-            this.cerrarTodoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarTodoToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.cerrarTodoToolStripMenuItem.Text = "Cerrar todo";
             // 
             // smSalir
             // 
             this.smSalir.Name = "smSalir";
-            this.smSalir.Size = new System.Drawing.Size(180, 22);
+            this.smSalir.Size = new System.Drawing.Size(168, 26);
             this.smSalir.Text = "Salir";
             this.smSalir.Click += new System.EventHandler(this.smSalir_Click);
             // 
@@ -109,34 +109,34 @@
             this.smHorizontal,
             this.smVertical});
             this.smVentana.Name = "smVentana";
-            this.smVentana.Size = new System.Drawing.Size(61, 20);
+            this.smVentana.Size = new System.Drawing.Size(76, 24);
             this.smVentana.Text = "Ventana";
             // 
             // smArrangItems
             // 
             this.smArrangItems.Name = "smArrangItems";
-            this.smArrangItems.Size = new System.Drawing.Size(144, 22);
+            this.smArrangItems.Size = new System.Drawing.Size(179, 26);
             this.smArrangItems.Text = "ArrangeIcons";
             this.smArrangItems.Click += new System.EventHandler(this.smArrangItems_Click);
             // 
             // smCascada
             // 
             this.smCascada.Name = "smCascada";
-            this.smCascada.Size = new System.Drawing.Size(144, 22);
+            this.smCascada.Size = new System.Drawing.Size(179, 26);
             this.smCascada.Text = "Cascada";
             this.smCascada.Click += new System.EventHandler(this.smCascada_Click);
             // 
             // smHorizontal
             // 
             this.smHorizontal.Name = "smHorizontal";
-            this.smHorizontal.Size = new System.Drawing.Size(144, 22);
+            this.smHorizontal.Size = new System.Drawing.Size(179, 26);
             this.smHorizontal.Text = "Horizontal";
             this.smHorizontal.Click += new System.EventHandler(this.smHorizontal_Click);
             // 
             // smVertical
             // 
             this.smVertical.Name = "smVertical";
-            this.smVertical.Size = new System.Drawing.Size(144, 22);
+            this.smVertical.Size = new System.Drawing.Size(179, 26);
             this.smVertical.Text = "Vertical";
             this.smVertical.Click += new System.EventHandler(this.smVertical_Click);
             // 
@@ -145,7 +145,7 @@
             this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiBarraEstado});
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // tsmiBarraEstado
@@ -154,7 +154,7 @@
             this.tsmiBarraEstado.CheckOnClick = true;
             this.tsmiBarraEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmiBarraEstado.Name = "tsmiBarraEstado";
-            this.tsmiBarraEstado.Size = new System.Drawing.Size(155, 22);
+            this.tsmiBarraEstado.Size = new System.Drawing.Size(197, 26);
             this.tsmiBarraEstado.Text = "Barra de estado";
             this.tsmiBarraEstado.Click += new System.EventHandler(this.tsmiBarraEstado_Click);
             // 
@@ -164,35 +164,39 @@
             this.ssBarraEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslSeleccionado,
             this.tslDocumento});
-            this.ssBarraEstado.Location = new System.Drawing.Point(0, 428);
+            this.ssBarraEstado.Location = new System.Drawing.Point(0, 532);
             this.ssBarraEstado.Name = "ssBarraEstado";
-            this.ssBarraEstado.Size = new System.Drawing.Size(800, 22);
+            this.ssBarraEstado.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.ssBarraEstado.Size = new System.Drawing.Size(1067, 22);
             this.ssBarraEstado.TabIndex = 1;
             this.ssBarraEstado.Text = "statusStrip1";
             // 
             // tslSeleccionado
             // 
             this.tslSeleccionado.Name = "tslSeleccionado";
-            this.tslSeleccionado.Size = new System.Drawing.Size(0, 17);
+            this.tslSeleccionado.Size = new System.Drawing.Size(0, 16);
             // 
             // tslDocumento
             // 
             this.tslDocumento.Name = "tslDocumento";
-            this.tslDocumento.Size = new System.Drawing.Size(785, 17);
+            this.tslDocumento.Size = new System.Drawing.Size(1047, 16);
             this.tslDocumento.Spring = true;
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.ssBarraEstado);
             this.Controls.Add(this.msMenu);
             this.MainMenuStrip = this.msMenu;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPrincipal";
             this.Text = "Editor de texto";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.MdiChildActivate += new System.EventHandler(this.FormPrincipal_MdiChildActivate);
+            this.Layout += new System.Windows.Forms.LayoutEventHandler(this.FormPrincipal_Layout);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.ssBarraEstado.ResumeLayout(false);
