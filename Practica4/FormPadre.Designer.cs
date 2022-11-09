@@ -77,27 +77,28 @@
             // smNuevo
             // 
             this.smNuevo.Name = "smNuevo";
-            this.smNuevo.Size = new System.Drawing.Size(168, 26);
+            this.smNuevo.Size = new System.Drawing.Size(224, 26);
             this.smNuevo.Text = "Nuevo";
             this.smNuevo.Click += new System.EventHandler(this.smNuevo_Click);
             // 
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.abrirToolStripMenuItem.Text = "Abrir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // cerrarTodoToolStripMenuItem
             // 
             this.cerrarTodoToolStripMenuItem.Name = "cerrarTodoToolStripMenuItem";
-            this.cerrarTodoToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.cerrarTodoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cerrarTodoToolStripMenuItem.Text = "Cerrar todo";
+            this.cerrarTodoToolStripMenuItem.Click += new System.EventHandler(this.cerrarTodoToolStripMenuItem_Click);
             // 
             // smSalir
             // 
             this.smSalir.Name = "smSalir";
-            this.smSalir.Size = new System.Drawing.Size(168, 26);
+            this.smSalir.Size = new System.Drawing.Size(224, 26);
             this.smSalir.Text = "Salir";
             this.smSalir.Click += new System.EventHandler(this.smSalir_Click);
             // 
@@ -191,7 +192,7 @@
             this.Controls.Add(this.ssBarraEstado);
             this.Controls.Add(this.msMenu);
             this.MainMenuStrip = this.msMenu;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
             this.Text = "Editor de texto";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);

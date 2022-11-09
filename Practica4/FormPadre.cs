@@ -76,8 +76,6 @@ namespace Practica4
                 tslDocumento.Text = ActiveMdiChild.Text;
 
             }
-
-
         }
         private void tsmiBarraEstado_Click(object sender, EventArgs e)
         {
@@ -164,6 +162,12 @@ namespace Practica4
         private void FormPrincipal_Layout(object sender, LayoutEventArgs e)
         {
             this.CargarEventos();
+        }
+
+        private void cerrarTodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
         }
     }
 }

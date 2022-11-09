@@ -50,10 +50,10 @@
             // 
             this.rtbTexto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbTexto.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbTexto.Location = new System.Drawing.Point(0, 0);
+            this.rtbTexto.Location = new System.Drawing.Point(0, 28);
             this.rtbTexto.Margin = new System.Windows.Forms.Padding(4);
             this.rtbTexto.Name = "rtbTexto";
-            this.rtbTexto.Size = new System.Drawing.Size(1067, 554);
+            this.rtbTexto.Size = new System.Drawing.Size(1067, 526);
             this.rtbTexto.TabIndex = 0;
             this.rtbTexto.Text = "";
             this.rtbTexto.TextChanged += new System.EventHandler(this.rtbTexto_TextChanged);
@@ -102,7 +102,7 @@
             this.tsmiGuardar.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiGuardar.MergeIndex = 2;
             this.tsmiGuardar.Name = "tsmiGuardar";
-            this.tsmiGuardar.Size = new System.Drawing.Size(187, 26);
+            this.tsmiGuardar.Size = new System.Drawing.Size(224, 26);
             this.tsmiGuardar.Text = "Guardar";
             this.tsmiGuardar.Click += new System.EventHandler(this.tsmiGuardar_Click);
             // 
@@ -111,7 +111,7 @@
             this.tsmiGuardarComo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiGuardarComo.MergeIndex = 3;
             this.tsmiGuardarComo.Name = "tsmiGuardarComo";
-            this.tsmiGuardarComo.Size = new System.Drawing.Size(187, 26);
+            this.tsmiGuardarComo.Size = new System.Drawing.Size(224, 26);
             this.tsmiGuardarComo.Text = "Guardar como";
             this.tsmiGuardarComo.Click += new System.EventHandler(this.tsmiGuardarComo_Click);
             // 
@@ -120,15 +120,16 @@
             this.toolStripSeparator1.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.toolStripSeparator1.MergeIndex = 4;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // tsmiCerrar
             // 
             this.tsmiCerrar.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiCerrar.MergeIndex = 5;
             this.tsmiCerrar.Name = "tsmiCerrar";
-            this.tsmiCerrar.Size = new System.Drawing.Size(187, 26);
+            this.tsmiCerrar.Size = new System.Drawing.Size(224, 26);
             this.tsmiCerrar.Text = "Cerrar";
+            this.tsmiCerrar.Click += new System.EventHandler(this.tsmiCerrar_Click);
             // 
             // tsmiEdicion
             // 

@@ -59,7 +59,7 @@ namespace Practica4
                 } else if (resultado == DialogResult.No)
                 {
                     tsmiGuardar.PerformClick();
-                } else
+                } else if (resultado == DialogResult.Cancel)
                 {
                     e.Cancel = true;
                 }
@@ -91,7 +91,6 @@ namespace Practica4
                 }
                 
             }
-            
         }
 
         private void tsmiGuardarComo_Click(object sender, EventArgs e)
@@ -118,9 +117,7 @@ namespace Practica4
                 }
                 this.Text = nombreYExt;
                 this.rtbTexto.Modified = false;
-            }
-            cuadroGuardar.Dispose();
-
+            } 
         }
 
         private void tsmiDeshacer_Click(object sender, EventArgs e)
@@ -159,6 +156,12 @@ namespace Practica4
         private void rtbTexto_TextChanged(object sender, EventArgs e)
         {
             this.rtbTexto.Modified = true;
+        }
+
+        private void tsmiCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
         }
     }
 }
