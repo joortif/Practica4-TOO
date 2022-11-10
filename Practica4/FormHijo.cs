@@ -85,7 +85,7 @@ namespace Practica4
                 if (nombre[nombre.Length-1] == "txt")
                 {
                     this.rtbTexto.SaveFile(this.ruta, RichTextBoxStreamType.PlainText);
-                } else if (nombre[trozos.Length - 1] == "rtf")
+                } else if (nombre[nombre.Length - 1] == "rtf")
                 {
                     this.rtbTexto.LoadFile(this.ruta, RichTextBoxStreamType.RichText);
                 }
