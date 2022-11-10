@@ -16,6 +16,7 @@ namespace Practica4
     public partial class FormHijo : Form
     {
         private String ruta;
+        private bool modificado = false;
 
         public RichTextBox RtbTexto
         {
@@ -111,7 +112,7 @@ namespace Practica4
                 if (ext == "rtf")
                 {
                     this.rtbTexto.SaveFile(cuadroGuardar.FileName, RichTextBoxStreamType.RichText);
-                } else
+                } else if (ext == "txt")
                 {
                     this.rtbTexto.SaveFile(cuadroGuardar.FileName, RichTextBoxStreamType.PlainText);
                 }
@@ -155,7 +156,7 @@ namespace Practica4
 
         private void rtbTexto_TextChanged(object sender, EventArgs e)
         {
-            this.rtbTexto.Modified = true;
+            this.modificado = true;
         }
 
         private void tsmiCerrar_Click(object sender, EventArgs e)
