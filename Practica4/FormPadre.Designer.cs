@@ -69,7 +69,7 @@
             this.msMenu.MdiWindowListItem = this.smVentana;
             this.msMenu.Name = "msMenu";
             this.msMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(1067, 28);
+            this.msMenu.Size = new System.Drawing.Size(1067, 30);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "msMenu";
             // 
@@ -81,14 +81,14 @@
             this.cerrarTodoToolStripMenuItem,
             this.smSalir});
             this.smArchivo.Name = "smArchivo";
-            this.smArchivo.Size = new System.Drawing.Size(73, 24);
+            this.smArchivo.Size = new System.Drawing.Size(73, 26);
             this.smArchivo.Text = "Archivo";
             // 
             // smNuevo
             // 
             this.smNuevo.Name = "smNuevo";
             this.smNuevo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.smNuevo.Size = new System.Drawing.Size(224, 26);
+            this.smNuevo.Size = new System.Drawing.Size(188, 26);
             this.smNuevo.Text = "Nuevo";
             this.smNuevo.Click += new System.EventHandler(this.smNuevo_Click);
             // 
@@ -96,21 +96,21 @@
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
             this.abrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.abrirToolStripMenuItem.Text = "Abrir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // cerrarTodoToolStripMenuItem
             // 
             this.cerrarTodoToolStripMenuItem.Name = "cerrarTodoToolStripMenuItem";
-            this.cerrarTodoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cerrarTodoToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.cerrarTodoToolStripMenuItem.Text = "Cerrar todo";
             this.cerrarTodoToolStripMenuItem.Click += new System.EventHandler(this.cerrarTodoToolStripMenuItem_Click);
             // 
             // smSalir
             // 
             this.smSalir.Name = "smSalir";
-            this.smSalir.Size = new System.Drawing.Size(224, 26);
+            this.smSalir.Size = new System.Drawing.Size(188, 26);
             this.smSalir.Text = "Salir";
             this.smSalir.Click += new System.EventHandler(this.smSalir_Click);
             // 
@@ -122,34 +122,34 @@
             this.smHorizontal,
             this.smVertical});
             this.smVentana.Name = "smVentana";
-            this.smVentana.Size = new System.Drawing.Size(76, 24);
+            this.smVentana.Size = new System.Drawing.Size(76, 26);
             this.smVentana.Text = "Ventana";
             // 
             // smArrangItems
             // 
             this.smArrangItems.Name = "smArrangItems";
-            this.smArrangItems.Size = new System.Drawing.Size(224, 26);
+            this.smArrangItems.Size = new System.Drawing.Size(179, 26);
             this.smArrangItems.Text = "ArrangeIcons";
             this.smArrangItems.Click += new System.EventHandler(this.smArrangItems_Click);
             // 
             // smCascada
             // 
             this.smCascada.Name = "smCascada";
-            this.smCascada.Size = new System.Drawing.Size(224, 26);
+            this.smCascada.Size = new System.Drawing.Size(179, 26);
             this.smCascada.Text = "Cascada";
             this.smCascada.Click += new System.EventHandler(this.smCascada_Click);
             // 
             // smHorizontal
             // 
             this.smHorizontal.Name = "smHorizontal";
-            this.smHorizontal.Size = new System.Drawing.Size(224, 26);
+            this.smHorizontal.Size = new System.Drawing.Size(179, 26);
             this.smHorizontal.Text = "Horizontal";
             this.smHorizontal.Click += new System.EventHandler(this.smHorizontal_Click);
             // 
             // smVertical
             // 
             this.smVertical.Name = "smVertical";
-            this.smVertical.Size = new System.Drawing.Size(224, 26);
+            this.smVertical.Size = new System.Drawing.Size(179, 26);
             this.smVertical.Text = "Vertical";
             this.smVertical.Click += new System.EventHandler(this.smVertical_Click);
             // 
@@ -158,7 +158,7 @@
             this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiBarraEstado});
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 26);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // tsmiBarraEstado
@@ -167,7 +167,7 @@
             this.tsmiBarraEstado.CheckOnClick = true;
             this.tsmiBarraEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmiBarraEstado.Name = "tsmiBarraEstado";
-            this.tsmiBarraEstado.Size = new System.Drawing.Size(224, 26);
+            this.tsmiBarraEstado.Size = new System.Drawing.Size(197, 26);
             this.tsmiBarraEstado.Text = "Barra de estado";
             this.tsmiBarraEstado.Click += new System.EventHandler(this.tsmiBarraEstado_Click);
             // 
@@ -222,9 +222,9 @@
             this.tsEditorPadre.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bhbtNuevo,
             this.bhbtAbrir});
-            this.tsEditorPadre.Location = new System.Drawing.Point(0, 28);
+            this.tsEditorPadre.Location = new System.Drawing.Point(0, 30);
             this.tsEditorPadre.Name = "tsEditorPadre";
-            this.tsEditorPadre.Size = new System.Drawing.Size(1067, 27);
+            this.tsEditorPadre.Size = new System.Drawing.Size(1067, 31);
             this.tsEditorPadre.TabIndex = 2;
             this.tsEditorPadre.Text = "toolStrip1";
             // 
@@ -235,8 +235,8 @@
             this.bhbtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bhbtNuevo.MergeIndex = 1;
             this.bhbtNuevo.Name = "bhbtNuevo";
-            this.bhbtNuevo.Size = new System.Drawing.Size(29, 24);
-            this.bhbtNuevo.Text = "Guardar";
+            this.bhbtNuevo.Size = new System.Drawing.Size(29, 28);
+            this.bhbtNuevo.Text = "Nuevo";
             this.bhbtNuevo.Click += new System.EventHandler(this.smNuevo_Click);
             // 
             // bhbtAbrir
@@ -247,7 +247,7 @@
             this.bhbtAbrir.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.bhbtAbrir.MergeIndex = 2;
             this.bhbtAbrir.Name = "bhbtAbrir";
-            this.bhbtAbrir.Size = new System.Drawing.Size(29, 24);
+            this.bhbtAbrir.Size = new System.Drawing.Size(29, 28);
             this.bhbtAbrir.Text = "Abrir";
             this.bhbtAbrir.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 

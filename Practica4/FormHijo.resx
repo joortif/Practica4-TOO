@@ -131,8 +131,8 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB+SURBVDhPY6AOiNn5gCF2138i8UeG6N0OUJ1QAJKI3i4J
-        xshsdAw2YLc/Q/SuV0BLnaC6gYAUA0B0zI5ghqidn6C6gYBUA2BsOKCqATG7HoH52DBIjqABxGLsBuzc
-        AGQfxYtBanAaAFYAtQEXhqkZNQDNANIyEwSD9FAOGBgAUUIuBTrT+koAAAAASUVORK5CYII=
+        xshsdAw2YLc/Q/SuV0BLnaC6gYAUA0B0zI5ghuidn6C6gYBUA2BsOKCqATG7HoH52DBIjqABxGLsBuzc
+        AGQfxYtBanAaAFYAtQEXhqkZNQDNANIyEwSD9FAOGBgAVFUuBnmaCx8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bhbtGuardarComo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -147,31 +147,31 @@
   <data name="bhbtDeshacer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADGSURBVDhPY6AaUFRU/A9lgoGysrIKUGwhED8F4m9AfEFe
-        Xr7A3t6eBaoEFSAbAFToICcn91JBQaEeyFbQ0tLiAbLtgOxDQHU7jY2NWaFKEQBmAJJmO7AEKmACyh8G
-        qi2E8hEAZACSZnuoMAYAqnEEqj0P5SIAyABCmkFATU1NBKjuE5SLAEAD7oMMQcdQaThQUlJSBYo/g3JJ
-        B6CABRqwCMolDcDCCOQKqBDxAKjJBqrZCSpEPBiJmkEAGF2loFCHcmkFGBgAi2g+FPhD4ocAAAAASUVO
-        RK5CYII=
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADFSURBVDhPY6AaUFRU/A9lgoGysrIKUGwhED8F4m9AfEFe
+        Xr7A3t6eBaoEFSAbAFToAMQvFRQU6oG0gpaWFg+QbQdkHwKq22lsbMwKVYoAMAOQNNuBJVABE1DuMFBt
+        IZSPACADkDTbQ4UxAFDeEaj2PJSLAFAD8GoGATU1NRGguk9QLgIADbgPMgQdQ6XhQElJSRUo/gzKJR2A
+        AhZowCIolzQACyOQK6BCxAOgJhuoZieoEPFgJGoGAWB0lQINcIByaQUYGADOoD41BnbgAwAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <data name="bhbtRehacer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC+SURBVDhPY6AqsLe3Z1FUVCyUk5O7CKS/AfETIF6goqKi
-        DFUCBkCx/1AmAhgbG7PKy8vvAkoeBGJbLS0tHqBBQKZiI5B+CZRzgCrFbgBQsBio6BCQyQQRQQAFBQV7
-        ZEOwGgCUvARSCOViAGRDcBnwWUpKShjKxQqAhtiBDMHlhefKysoqUC4cgBRjwfeh0ggANH0pENdBuaQD
-        oKlq6KFNMlBSUrIBGQKknaBCpINRQzABKFaA0VsK5VIbMDAAAKEMPfZYydRhAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADASURBVDhPY6AqsLe3Z1FUVCyUl5e/CKS/AfETIF6goqKi
+        DFUCBkCx/1AmAhgbG7MCNe4CSh4EYlstLS0eOTk5IFOxESj+EogdoEqxGwAULAYqOgRkMkFEEEBBQcEe
+        2RCsBgAlL4EUQrkYANkQXAZ8lpKSEoZysQKgIXYgQ3B54bmysrIKlAsHIMVY8H2oNAIATV8KxHVQLukA
+        aKoazI9QIdKBkpKSDcgQIO0EFSIdjBqCCYAGOACjtxTKpTZgYAAA57A+F4FZXiYAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bhbtCortar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEDSURBVDhPrZHNasJAFIVn12JdlJYYkqb5z7so4s/SjV22
-        q9KliO1jlD6FCj6FPoe67b47z4GjCElwhB445N5vzp1MJqZKnuc1VJ5UxSqV5/lNkiRTtSeBzbimtl4M
-        xXE8j6IoFjKsyaw2oDAwwsCnWoP6i0ztZSF8i6FFlmXPRVE8oV5a38FRGHpJ03TC+0A9FraX67p3YRhu
-        aMdxmsLXCcN/tNrrhOO3cPy17ArbC9/9Ab/Cb/C7sJ2CIHjAn1j5vv+I5/2x1nK9cNQuvMcbf+FvYfIf
-        mGyHzTrCZTGAYA+hIWthcm7ahwdY2wqXxSGFhufBOl4SFjsMMwS3hWv5P8iYA1/XQMUr0F8+AAAAAElF
-        TkSuQmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEESURBVDhPrZDNasJQFITvzlK7KJYYksb8510q0tZlN7rU
+        lbgUaX0M8Sm00KfQ57DdunfnDIxSSEKv0IEh53x3zs1JTJU8z7tVeVEVq1Se540kSeZqLwJ755naejEU
+        x/E6iqJYyLAms7qAwsAbBj7UGtQLMrV/C+EbDG2yLOsURfGI+tP6H5yFoWGapjP+D9QDYXu5rtsMw3CH
+        bXaO49wJXycMH2m11wnrt7H+VnaF7YXvnsIjeAxPhO0UBEELq3/5vv+A5/251nG9sGoP/sEbD/BSmHwF
+        k33jsq5wWQwg+IxQn7UwOS99gV9xthcui0MK9X8H63hJOOwyzBD8JFzL/0HGnAB0BUDOrKJ0QgAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <data name="bhbtCopiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

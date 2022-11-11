@@ -47,18 +47,12 @@ namespace Practica4
         {
             InitializeComponent();
             this.ruta = nombre;
-            
-
-
         }
 
         private void FormHijo_FormClosed(object sender, FormClosedEventArgs e)
         {
             MessageBox.Show("Se ha cerrado " + this.Text, "Aviso");
-            FormPrincipal fPadre = this.Parent as FormPrincipal;
             
-            
-
         }
 
         private void FormHijo_FormClosing(object sender, FormClosingEventArgs e)
@@ -188,5 +182,7 @@ namespace Practica4
         {
             this.rtbTexto.Redo();
         }
+
+        
     }
 }

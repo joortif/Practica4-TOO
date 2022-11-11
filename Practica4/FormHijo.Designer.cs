@@ -40,10 +40,12 @@
             this.tsmiCerrar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiEdicion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeshacer = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiRehacer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiCortar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopiar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPegar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSeleccionarTodo = new System.Windows.Forms.ToolStripMenuItem();
             this.fuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsMenuContextualHijo = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tscdDeshacer = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,8 +63,6 @@
             this.bhbtCortar = new System.Windows.Forms.ToolStripButton();
             this.bhbtCopiar = new System.Windows.Forms.ToolStripButton();
             this.bhbtPegar = new System.Windows.Forms.ToolStripButton();
-            this.tsmiRehacer = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSeleccionarTodo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbtSeleccionarTodo = new System.Windows.Forms.ToolStripButton();
             this.msMenuHijo.SuspendLayout();
             this.cmsMenuContextualHijo.SuspendLayout();
@@ -180,6 +180,14 @@
             this.tsmiDeshacer.Text = "Deshacer";
             this.tsmiDeshacer.Click += new System.EventHandler(this.tsmiDeshacer_Click);
             // 
+            // tsmiRehacer
+            // 
+            this.tsmiRehacer.Name = "tsmiRehacer";
+            this.tsmiRehacer.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.tsmiRehacer.Size = new System.Drawing.Size(254, 26);
+            this.tsmiRehacer.Text = "Rehacer";
+            this.tsmiRehacer.Click += new System.EventHandler(this.tsmiRehacer_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -208,6 +216,13 @@
             this.tsmiPegar.Size = new System.Drawing.Size(254, 26);
             this.tsmiPegar.Text = "Pegar";
             this.tsmiPegar.Click += new System.EventHandler(this.tsmiPegar_Click);
+            // 
+            // tsmiSeleccionarTodo
+            // 
+            this.tsmiSeleccionarTodo.Name = "tsmiSeleccionarTodo";
+            this.tsmiSeleccionarTodo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.tsmiSeleccionarTodo.Size = new System.Drawing.Size(254, 26);
+            this.tsmiSeleccionarTodo.Text = "Seleccionar todo";
             // 
             // fuenteToolStripMenuItem
             // 
@@ -360,21 +375,6 @@
             this.bhbtPegar.Size = new System.Drawing.Size(29, 24);
             this.bhbtPegar.Text = "Pegar";
             this.bhbtPegar.Click += new System.EventHandler(this.tsmiPegar_Click);
-            // 
-            // tsmiRehacer
-            // 
-            this.tsmiRehacer.Name = "tsmiRehacer";
-            this.tsmiRehacer.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.tsmiRehacer.Size = new System.Drawing.Size(254, 26);
-            this.tsmiRehacer.Text = "Rehacer";
-            this.tsmiRehacer.Click += new System.EventHandler(this.tsmiRehacer_Click);
-            // 
-            // tsmiSeleccionarTodo
-            // 
-            this.tsmiSeleccionarTodo.Name = "tsmiSeleccionarTodo";
-            this.tsmiSeleccionarTodo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.tsmiSeleccionarTodo.Size = new System.Drawing.Size(254, 26);
-            this.tsmiSeleccionarTodo.Text = "Seleccionar todo";
             // 
             // tsbtSeleccionarTodo
             // 
