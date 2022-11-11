@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.smArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.smNuevo = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +46,16 @@
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tslSeleccionado = new System.Windows.Forms.ToolStripStatusLabel();
             this.tslDocumento = new System.Windows.Forms.ToolStripStatusLabel();
+            this.cmsMenuContextualPadre = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tscdAbrir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tscdNuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsEditorPadre = new System.Windows.Forms.ToolStrip();
+            this.bhbtNuevo = new System.Windows.Forms.ToolStripButton();
+            this.bhbtAbrir = new System.Windows.Forms.ToolStripButton();
             this.msMenu.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
+            this.cmsMenuContextualPadre.SuspendLayout();
+            this.tsEditorPadre.SuspendLayout();
             this.SuspendLayout();
             // 
             // msMenu
@@ -61,7 +71,7 @@
             this.msMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.msMenu.Size = new System.Drawing.Size(1067, 28);
             this.msMenu.TabIndex = 0;
-            this.msMenu.Text = "menuStrip1";
+            this.msMenu.Text = "msMenu";
             // 
             // smArchivo
             // 
@@ -77,6 +87,7 @@
             // smNuevo
             // 
             this.smNuevo.Name = "smNuevo";
+            this.smNuevo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.smNuevo.Size = new System.Drawing.Size(224, 26);
             this.smNuevo.Text = "Nuevo";
             this.smNuevo.Click += new System.EventHandler(this.smNuevo_Click);
@@ -84,6 +95,7 @@
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.abrirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.abrirToolStripMenuItem.Text = "Abrir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
@@ -116,28 +128,28 @@
             // smArrangItems
             // 
             this.smArrangItems.Name = "smArrangItems";
-            this.smArrangItems.Size = new System.Drawing.Size(179, 26);
+            this.smArrangItems.Size = new System.Drawing.Size(224, 26);
             this.smArrangItems.Text = "ArrangeIcons";
             this.smArrangItems.Click += new System.EventHandler(this.smArrangItems_Click);
             // 
             // smCascada
             // 
             this.smCascada.Name = "smCascada";
-            this.smCascada.Size = new System.Drawing.Size(179, 26);
+            this.smCascada.Size = new System.Drawing.Size(224, 26);
             this.smCascada.Text = "Cascada";
             this.smCascada.Click += new System.EventHandler(this.smCascada_Click);
             // 
             // smHorizontal
             // 
             this.smHorizontal.Name = "smHorizontal";
-            this.smHorizontal.Size = new System.Drawing.Size(179, 26);
+            this.smHorizontal.Size = new System.Drawing.Size(224, 26);
             this.smHorizontal.Text = "Horizontal";
             this.smHorizontal.Click += new System.EventHandler(this.smHorizontal_Click);
             // 
             // smVertical
             // 
             this.smVertical.Name = "smVertical";
-            this.smVertical.Size = new System.Drawing.Size(179, 26);
+            this.smVertical.Size = new System.Drawing.Size(224, 26);
             this.smVertical.Text = "Vertical";
             this.smVertical.Click += new System.EventHandler(this.smVertical_Click);
             // 
@@ -155,7 +167,7 @@
             this.tsmiBarraEstado.CheckOnClick = true;
             this.tsmiBarraEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmiBarraEstado.Name = "tsmiBarraEstado";
-            this.tsmiBarraEstado.Size = new System.Drawing.Size(197, 26);
+            this.tsmiBarraEstado.Size = new System.Drawing.Size(224, 26);
             this.tsmiBarraEstado.Text = "Barra de estado";
             this.tsmiBarraEstado.Click += new System.EventHandler(this.tsmiBarraEstado_Click);
             // 
@@ -183,12 +195,70 @@
             this.tslDocumento.Size = new System.Drawing.Size(1047, 16);
             this.tslDocumento.Spring = true;
             // 
+            // cmsMenuContextualPadre
+            // 
+            this.cmsMenuContextualPadre.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsMenuContextualPadre.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tscdAbrir,
+            this.tscdNuevo});
+            this.cmsMenuContextualPadre.Name = "cmsMenuContextualPadre";
+            this.cmsMenuContextualPadre.Size = new System.Drawing.Size(122, 52);
+            // 
+            // tscdAbrir
+            // 
+            this.tscdAbrir.Name = "tscdAbrir";
+            this.tscdAbrir.Size = new System.Drawing.Size(121, 24);
+            this.tscdAbrir.Text = "Abrir";
+            // 
+            // tscdNuevo
+            // 
+            this.tscdNuevo.Name = "tscdNuevo";
+            this.tscdNuevo.Size = new System.Drawing.Size(121, 24);
+            this.tscdNuevo.Text = "Nuevo";
+            // 
+            // tsEditorPadre
+            // 
+            this.tsEditorPadre.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.tsEditorPadre.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bhbtNuevo,
+            this.bhbtAbrir});
+            this.tsEditorPadre.Location = new System.Drawing.Point(0, 28);
+            this.tsEditorPadre.Name = "tsEditorPadre";
+            this.tsEditorPadre.Size = new System.Drawing.Size(1067, 27);
+            this.tsEditorPadre.TabIndex = 2;
+            this.tsEditorPadre.Text = "toolStrip1";
+            // 
+            // bhbtNuevo
+            // 
+            this.bhbtNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bhbtNuevo.Image = ((System.Drawing.Image)(resources.GetObject("bhbtNuevo.Image")));
+            this.bhbtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bhbtNuevo.MergeIndex = 1;
+            this.bhbtNuevo.Name = "bhbtNuevo";
+            this.bhbtNuevo.Size = new System.Drawing.Size(29, 24);
+            this.bhbtNuevo.Text = "Guardar";
+            this.bhbtNuevo.Click += new System.EventHandler(this.smNuevo_Click);
+            // 
+            // bhbtAbrir
+            // 
+            this.bhbtAbrir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bhbtAbrir.Image = ((System.Drawing.Image)(resources.GetObject("bhbtAbrir.Image")));
+            this.bhbtAbrir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bhbtAbrir.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.bhbtAbrir.MergeIndex = 2;
+            this.bhbtAbrir.Name = "bhbtAbrir";
+            this.bhbtAbrir.Size = new System.Drawing.Size(29, 24);
+            this.bhbtAbrir.Text = "Abrir";
+            this.bhbtAbrir.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ContextMenuStrip = this.cmsMenuContextualPadre;
+            this.Controls.Add(this.tsEditorPadre);
             this.Controls.Add(this.ssBarraEstado);
             this.Controls.Add(this.msMenu);
             this.MainMenuStrip = this.msMenu;
@@ -202,6 +272,9 @@
             this.msMenu.PerformLayout();
             this.ssBarraEstado.ResumeLayout(false);
             this.ssBarraEstado.PerformLayout();
+            this.cmsMenuContextualPadre.ResumeLayout(false);
+            this.tsEditorPadre.ResumeLayout(false);
+            this.tsEditorPadre.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,6 +298,12 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarTodoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiBarraEstado;
+        private System.Windows.Forms.ContextMenuStrip cmsMenuContextualPadre;
+        private System.Windows.Forms.ToolStripMenuItem tscdAbrir;
+        private System.Windows.Forms.ToolStripMenuItem tscdNuevo;
+        private System.Windows.Forms.ToolStrip tsEditorPadre;
+        private System.Windows.Forms.ToolStripButton bhbtNuevo;
+        private System.Windows.Forms.ToolStripButton bhbtAbrir;
     }
 }
 

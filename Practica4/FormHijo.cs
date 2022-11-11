@@ -34,19 +34,31 @@ namespace Practica4
             }
         }
 
+        public ToolStrip TsEditorHijo
+        {
+            get
+            {
+                return this.tsEditorHijo;
+            }
+        }
+
 
         public FormHijo(String nombre)
         {
             InitializeComponent();
             this.ruta = nombre;
+            
 
-       
+
         }
 
         private void FormHijo_FormClosed(object sender, FormClosedEventArgs e)
         {
             MessageBox.Show("Se ha cerrado " + this.Text, "Aviso");
+            FormPrincipal fPadre = this.Parent as FormPrincipal;
             
+            
+
         }
 
         private void FormHijo_FormClosing(object sender, FormClosingEventArgs e)
@@ -156,13 +168,25 @@ namespace Practica4
 
         private void rtbTexto_TextChanged(object sender, EventArgs e)
         {
-            this.modificado = true;
+            if (!this.modificado)
+            {
+                this.modificado = true;
+            } else
+            {
+                this.rtbTexto.TextChanged -= this.rtbTexto_TextChanged;
+            }
+            
         }
 
         private void tsmiCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void tsmiRehacer_Click(object sender, EventArgs e)
+        {
+            this.rtbTexto.Redo();
         }
     }
 }

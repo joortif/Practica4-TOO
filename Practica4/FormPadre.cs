@@ -16,12 +16,23 @@ namespace Practica4
     {
 
         private int numForms = 0;
+        bool merged = false;
+
+        public ToolStrip TsEditorPadre
+        {
+            get
+            {
+                return this.tsEditorPadre;
+            }
+        }
+       
         public FormPrincipal()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             IsMdiContainer = true;
             smVentana.Visible = false;
+            
 
         }
 
@@ -35,11 +46,17 @@ namespace Practica4
         private void smNuevo_Click(object sender, EventArgs e)
         {
             numForms++;
-            Form fHijo = new FormHijo("");
+            FormHijo fHijo = new FormHijo("");
             fHijo.Text = "Documento " + numForms;
-            fHijo.Show();
             fHijo.MdiParent = this;
+            if (!merged)
+            {
+                merged = ToolStripManager.Merge(fHijo.TsEditorHijo, this.tsEditorPadre);
+                
 
+            }
+            
+            fHijo.Show();
 
         }
 
@@ -69,6 +86,7 @@ namespace Practica4
             {
                 smVentana.Visible = false;
                 tslDocumento.Text = null;
+                
             }
             else
             {
@@ -152,6 +170,7 @@ namespace Practica4
                     
                 }
             }
+       
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -169,5 +188,7 @@ namespace Practica4
             this.Close();
             this.Dispose();
         }
+
+       
     }
 }
