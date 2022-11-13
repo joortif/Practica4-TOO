@@ -32,7 +32,8 @@ namespace Practica4
             WindowState = FormWindowState.Maximized;
             IsMdiContainer = true;
             smVentana.Visible = false;
-            
+            this.tsmiCerrarDocs.Enabled = false;
+
 
         }
 
@@ -90,11 +91,24 @@ namespace Practica4
                     ToolStripManager.RevertMerge(this.tsEditorPadre);
                     this.merged = false;
                 }
+                this.tsmiCerrarDocs.Enabled = false;
             }
             else
             {
                 smVentana.Visible = true;
                 tslDocumento.Text = ActiveMdiChild.Text;
+                this.tsmiCerrarDocs.Enabled = true;
+                FormHijo hijo = (FormHijo)this.ActiveMdiChild;
+                foreach (ToolStripItem item in hijo.RtbTexto.ContextMenuStrip.Items)
+                {
+                    if (item is ToolStripMenuItem)
+                    {
+                        item.MouseHover -= ToolStripItem_MouseHover;
+                        item.MouseLeave -= ToolStripItem_MouseLeave;
+                        item.MouseHover += ToolStripItem_MouseHover;
+                        item.MouseLeave += ToolStripItem_MouseLeave;
+                    }
+                }
 
             }
         }
@@ -133,8 +147,10 @@ namespace Practica4
                     fHijo.RtbTexto.LoadFile(ofd.FileName, RichTextBoxStreamType.RichText);
                 }
                 fHijo.Text = nombreCompleto;
+                fHijo.Modificado = false;
                 fHijo.Show();
-                fHijo.RtbTexto.Modified = false;
+               
+                
             }
             ofd.Dispose();
 
@@ -173,6 +189,26 @@ namespace Practica4
                     
                 }
             }
+            foreach (ToolStripItem item in this.tsEditorPadre.Items)
+            {
+                if (item is ToolStripButton)
+                {
+                    item.MouseHover -= ToolStripItem_MouseHover;
+                    item.MouseLeave -= ToolStripItem_MouseLeave;
+                    item.MouseHover += ToolStripItem_MouseHover;
+                    item.MouseLeave += ToolStripItem_MouseLeave;
+                }
+            }
+            foreach (ToolStripItem item in this.cmsMenuContextualPadre.Items)
+            {
+                if (item is ToolStripMenuItem)
+                {
+                    item.MouseHover -= ToolStripItem_MouseHover;
+                    item.MouseLeave -= ToolStripItem_MouseLeave;
+                    item.MouseHover += ToolStripItem_MouseHover;
+                    item.MouseLeave += ToolStripItem_MouseLeave;
+                }
+            }
        
         }
 
@@ -193,10 +229,12 @@ namespace Practica4
             this.Dispose();
         }
 
-        private void DesactivarMerge(object sender, EventArgs e)
+        private void tsmiCerrarDocs_Click(object sender, EventArgs e)
         {
-            
+            foreach (Form hijo in this.MdiChildren){
+                hijo.Close();
+                hijo.Dispose();
+            }
         }
-
     }
 }

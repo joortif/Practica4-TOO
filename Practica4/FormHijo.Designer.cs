@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHijo));
             this.rtbTexto = new System.Windows.Forms.RichTextBox();
             this.btCerrar = new System.Windows.Forms.Button();
@@ -45,15 +44,10 @@
             this.tsmiCortar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopiar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPegar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBorrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiSeleccionarTodo = new System.Windows.Forms.ToolStripMenuItem();
             this.fuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsMenuContextualHijo = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tscdDeshacer = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tscdCortar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tscdCopiar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tscdPegar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tscdCerrar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsEditorHijo = new System.Windows.Forms.ToolStrip();
             this.bhbtGuardar = new System.Windows.Forms.ToolStripButton();
             this.bhbtGuardarComo = new System.Windows.Forms.ToolStripButton();
@@ -65,7 +59,6 @@
             this.bhbtPegar = new System.Windows.Forms.ToolStripButton();
             this.tsbtSeleccionarTodo = new System.Windows.Forms.ToolStripButton();
             this.msMenuHijo.SuspendLayout();
-            this.cmsMenuContextualHijo.SuspendLayout();
             this.tsEditorHijo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,12 +158,15 @@
             this.tsmiCortar,
             this.tsmiCopiar,
             this.tsmiPegar,
+            this.tsmiBorrar,
+            this.toolStripSeparator3,
             this.tsmiSeleccionarTodo});
             this.tsmiEdicion.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.tsmiEdicion.MergeIndex = 1;
             this.tsmiEdicion.Name = "tsmiEdicion";
             this.tsmiEdicion.Size = new System.Drawing.Size(72, 24);
             this.tsmiEdicion.Text = "Edición";
+            this.tsmiEdicion.DropDownOpening += new System.EventHandler(this.tsmiEdicion_DropDownOpening);
             // 
             // tsmiDeshacer
             // 
@@ -217,12 +213,26 @@
             this.tsmiPegar.Text = "Pegar";
             this.tsmiPegar.Click += new System.EventHandler(this.tsmiPegar_Click);
             // 
+            // tsmiBorrar
+            // 
+            this.tsmiBorrar.Name = "tsmiBorrar";
+            this.tsmiBorrar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.tsmiBorrar.Size = new System.Drawing.Size(254, 26);
+            this.tsmiBorrar.Text = "Borrar";
+            this.tsmiBorrar.Click += new System.EventHandler(this.tsmiBorrar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(251, 6);
+            // 
             // tsmiSeleccionarTodo
             // 
             this.tsmiSeleccionarTodo.Name = "tsmiSeleccionarTodo";
             this.tsmiSeleccionarTodo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.tsmiSeleccionarTodo.Size = new System.Drawing.Size(254, 26);
             this.tsmiSeleccionarTodo.Text = "Seleccionar todo";
+            this.tsmiSeleccionarTodo.Click += new System.EventHandler(this.tsmiSeleccionarTodo_Click);
             // 
             // fuenteToolStripMenuItem
             // 
@@ -231,54 +241,6 @@
             this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.fuenteToolStripMenuItem.Text = "Fuente";
             this.fuenteToolStripMenuItem.Click += new System.EventHandler(this.fuenteToolStripMenuItem_Click);
-            // 
-            // cmsMenuContextualHijo
-            // 
-            this.cmsMenuContextualHijo.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsMenuContextualHijo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tscdDeshacer,
-            this.toolStripSeparator3,
-            this.tscdCortar,
-            this.tscdCopiar,
-            this.tscdPegar,
-            this.tscdCerrar});
-            this.cmsMenuContextualHijo.Name = "cmsMenuContextualHijo";
-            this.cmsMenuContextualHijo.Size = new System.Drawing.Size(140, 130);
-            // 
-            // tscdDeshacer
-            // 
-            this.tscdDeshacer.Name = "tscdDeshacer";
-            this.tscdDeshacer.Size = new System.Drawing.Size(139, 24);
-            this.tscdDeshacer.Text = "Deshacer";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(136, 6);
-            // 
-            // tscdCortar
-            // 
-            this.tscdCortar.Name = "tscdCortar";
-            this.tscdCortar.Size = new System.Drawing.Size(139, 24);
-            this.tscdCortar.Text = "Cortar";
-            // 
-            // tscdCopiar
-            // 
-            this.tscdCopiar.Name = "tscdCopiar";
-            this.tscdCopiar.Size = new System.Drawing.Size(139, 24);
-            this.tscdCopiar.Text = "Copiar";
-            // 
-            // tscdPegar
-            // 
-            this.tscdPegar.Name = "tscdPegar";
-            this.tscdPegar.Size = new System.Drawing.Size(139, 24);
-            this.tscdPegar.Text = "Pegar";
-            // 
-            // tscdCerrar
-            // 
-            this.tscdCerrar.Name = "tscdCerrar";
-            this.tscdCerrar.Size = new System.Drawing.Size(139, 24);
-            this.tscdCerrar.Text = "Cerrar";
             // 
             // tsEditorHijo
             // 
@@ -384,26 +346,28 @@
             this.tsbtSeleccionarTodo.Name = "tsbtSeleccionarTodo";
             this.tsbtSeleccionarTodo.Size = new System.Drawing.Size(29, 24);
             this.tsbtSeleccionarTodo.Text = "Seleccionar todo";
+            this.tsbtSeleccionarTodo.Click += new System.EventHandler(this.tsmiSeleccionarTodo_Click);
             // 
             // FormHijo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.ContextMenuStrip = this.cmsMenuContextualHijo;
             this.Controls.Add(this.tsEditorHijo);
             this.Controls.Add(this.btCerrar);
             this.Controls.Add(this.rtbTexto);
             this.Controls.Add(this.msMenuHijo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenuHijo;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormHijo";
             this.Text = "FormHijo";
+            this.Activated += new System.EventHandler(this.FormHijo_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHijo_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormHijo_FormClosed);
+            this.Load += new System.EventHandler(this.FormHijo_Load);
             this.msMenuHijo.ResumeLayout(false);
             this.msMenuHijo.PerformLayout();
-            this.cmsMenuContextualHijo.ResumeLayout(false);
             this.tsEditorHijo.ResumeLayout(false);
             this.tsEditorHijo.PerformLayout();
             this.ResumeLayout(false);
@@ -428,13 +392,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip cmsMenuContextualHijo;
-        private System.Windows.Forms.ToolStripMenuItem tscdDeshacer;
-        private System.Windows.Forms.ToolStripMenuItem tscdCortar;
-        private System.Windows.Forms.ToolStripMenuItem tscdCopiar;
-        private System.Windows.Forms.ToolStripMenuItem tscdPegar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem tscdCerrar;
         private System.Windows.Forms.ToolStrip tsEditorHijo;
         private System.Windows.Forms.ToolStripButton bhbtGuardar;
         private System.Windows.Forms.ToolStripButton bhbtGuardarComo;
@@ -447,5 +404,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiRehacer;
         private System.Windows.Forms.ToolStripMenuItem tsmiSeleccionarTodo;
         private System.Windows.Forms.ToolStripButton tsbtSeleccionarTodo;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBorrar;
     }
 }

@@ -49,6 +49,8 @@
             this.cmsMenuContextualPadre = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tscdAbrir = new System.Windows.Forms.ToolStripMenuItem();
             this.tscdNuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiCerrarDocs = new System.Windows.Forms.ToolStripMenuItem();
             this.tsEditorPadre = new System.Windows.Forms.ToolStrip();
             this.bhbtNuevo = new System.Windows.Forms.ToolStripButton();
             this.bhbtAbrir = new System.Windows.Forms.ToolStripButton();
@@ -69,7 +71,7 @@
             this.msMenu.MdiWindowListItem = this.smVentana;
             this.msMenu.Name = "msMenu";
             this.msMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(1067, 30);
+            this.msMenu.Size = new System.Drawing.Size(1067, 28);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "msMenu";
             // 
@@ -81,7 +83,7 @@
             this.cerrarTodoToolStripMenuItem,
             this.smSalir});
             this.smArchivo.Name = "smArchivo";
-            this.smArchivo.Size = new System.Drawing.Size(73, 26);
+            this.smArchivo.Size = new System.Drawing.Size(73, 24);
             this.smArchivo.Text = "Archivo";
             // 
             // smNuevo
@@ -122,7 +124,7 @@
             this.smHorizontal,
             this.smVertical});
             this.smVentana.Name = "smVentana";
-            this.smVentana.Size = new System.Drawing.Size(76, 26);
+            this.smVentana.Size = new System.Drawing.Size(76, 24);
             this.smVentana.Text = "Ventana";
             // 
             // smArrangItems
@@ -158,7 +160,7 @@
             this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiBarraEstado});
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 26);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.verToolStripMenuItem.Text = "Ver";
             // 
             // tsmiBarraEstado
@@ -200,21 +202,37 @@
             this.cmsMenuContextualPadre.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsMenuContextualPadre.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tscdAbrir,
-            this.tscdNuevo});
+            this.tscdNuevo,
+            this.toolStripSeparator1,
+            this.tsmiCerrarDocs});
             this.cmsMenuContextualPadre.Name = "cmsMenuContextualPadre";
-            this.cmsMenuContextualPadre.Size = new System.Drawing.Size(122, 52);
+            this.cmsMenuContextualPadre.Size = new System.Drawing.Size(205, 82);
             // 
             // tscdAbrir
             // 
             this.tscdAbrir.Name = "tscdAbrir";
-            this.tscdAbrir.Size = new System.Drawing.Size(121, 24);
+            this.tscdAbrir.Size = new System.Drawing.Size(210, 24);
             this.tscdAbrir.Text = "Abrir";
+            this.tscdAbrir.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // tscdNuevo
             // 
             this.tscdNuevo.Name = "tscdNuevo";
-            this.tscdNuevo.Size = new System.Drawing.Size(121, 24);
+            this.tscdNuevo.Size = new System.Drawing.Size(210, 24);
             this.tscdNuevo.Text = "Nuevo";
+            this.tscdNuevo.Click += new System.EventHandler(this.smNuevo_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
+            // 
+            // tsmiCerrarDocs
+            // 
+            this.tsmiCerrarDocs.Name = "tsmiCerrarDocs";
+            this.tsmiCerrarDocs.Size = new System.Drawing.Size(210, 24);
+            this.tsmiCerrarDocs.Text = "Cerrar documentos";
+            this.tsmiCerrarDocs.Click += new System.EventHandler(this.tsmiCerrarDocs_Click);
             // 
             // tsEditorPadre
             // 
@@ -222,9 +240,9 @@
             this.tsEditorPadre.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bhbtNuevo,
             this.bhbtAbrir});
-            this.tsEditorPadre.Location = new System.Drawing.Point(0, 30);
+            this.tsEditorPadre.Location = new System.Drawing.Point(0, 28);
             this.tsEditorPadre.Name = "tsEditorPadre";
-            this.tsEditorPadre.Size = new System.Drawing.Size(1067, 31);
+            this.tsEditorPadre.Size = new System.Drawing.Size(1067, 27);
             this.tsEditorPadre.TabIndex = 2;
             this.tsEditorPadre.Text = "toolStrip1";
             // 
@@ -235,7 +253,7 @@
             this.bhbtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bhbtNuevo.MergeIndex = 1;
             this.bhbtNuevo.Name = "bhbtNuevo";
-            this.bhbtNuevo.Size = new System.Drawing.Size(29, 28);
+            this.bhbtNuevo.Size = new System.Drawing.Size(29, 24);
             this.bhbtNuevo.Text = "Nuevo";
             this.bhbtNuevo.Click += new System.EventHandler(this.smNuevo_Click);
             // 
@@ -247,7 +265,7 @@
             this.bhbtAbrir.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.bhbtAbrir.MergeIndex = 2;
             this.bhbtAbrir.Name = "bhbtAbrir";
-            this.bhbtAbrir.Size = new System.Drawing.Size(29, 28);
+            this.bhbtAbrir.Size = new System.Drawing.Size(29, 24);
             this.bhbtAbrir.Text = "Abrir";
             this.bhbtAbrir.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
@@ -261,6 +279,7 @@
             this.Controls.Add(this.tsEditorPadre);
             this.Controls.Add(this.ssBarraEstado);
             this.Controls.Add(this.msMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
@@ -304,6 +323,8 @@
         private System.Windows.Forms.ToolStrip tsEditorPadre;
         private System.Windows.Forms.ToolStripButton bhbtNuevo;
         private System.Windows.Forms.ToolStripButton bhbtAbrir;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCerrarDocs;
     }
 }
 
